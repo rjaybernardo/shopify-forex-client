@@ -397,6 +397,52 @@
         "padding_bottom": 36
       }
     },
+    "0ce94208-49c9-4e13-a107-0dccf56ad019": {
+      "type": "forex-course",
+      "blocks": {
+        "template--20764101017918__0ce94208-49c9-4e13-a107-0dccf56ad019-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Free 5 hour trading course",
+            "heading_size": "h1"
+          }
+        },
+        "template--20764101017918__0ce94208-49c9-4e13-a107-0dccf56ad019-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Included in my free course, you get access to my 5-hour trading course, as well as a speed course, completely for free.<br\/><br\/>This course is continuously updated with new and exciting videos that can<br\/>improve and help you enter the trading world with more confidence and<br\/>become a profitable trader on your own.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "template--20764101017918__0ce94208-49c9-4e13-a107-0dccf56ad019-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "watch now!",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "template--20764101017918__0ce94208-49c9-4e13-a107-0dccf56ad019-heading-1",
+        "template--20764101017918__0ce94208-49c9-4e13-a107-0dccf56ad019-text-1",
+        "template--20764101017918__0ce94208-49c9-4e13-a107-0dccf56ad019-button-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Laptop.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "d29bcbdc-a3ab-4817-a5b1-1140c8ff86df": {
       "type": "forex-faq",
       "blocks": {
@@ -467,6 +513,7 @@
     "90aedc63-248e-4c34-8526-74848bbbbe8c",
     "85e0ddfc-c28b-4302-99fa-f130f02e02e3",
     "546ae435-f453-4c4c-8b1b-65445f90288f",
+    "0ce94208-49c9-4e13-a107-0dccf56ad019",
     "d29bcbdc-a3ab-4817-a5b1-1140c8ff86df"
   ]
 }
