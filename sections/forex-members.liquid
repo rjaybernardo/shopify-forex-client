@@ -17,7 +17,29 @@
 <style>
     .forex-members-title{
         margin: 0 auto;
+        color: #0D0D0D;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 38.4px;
     }
+    .forex-members-button p{
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 18px; 
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
+    }
+    .forex-members-button{
+        margin-bottom: 7px;
+    }
+    .forex-members-caption{
+        color: #333;
+        font-size: 16px;
+        font-style: italic;
+        line-height: 24px;
+    }
+
 </style>
 {%- liquid
   assign columns_mobile_int = section.settings.columns_mobile | plus: 0
@@ -41,7 +63,7 @@
         </h2>
         {%- if section.settings.button_label != blank and show_mobile_slider -%}
           <a href="{{ section.settings.button_link }}" class="link underlined-link large-up-hide">
-            {{- section.settings.button_label | escape -}}
+           {{- section.settings.button_label | escape -}}
           </a>
         {%- endif -%}
       </div>
@@ -179,17 +201,17 @@
     <div class="center{% if show_mobile_slider %} small-hide medium-hide{% endif %}">
       {%- if section.settings.button_label != blank -%}
         <a
-          class="button button--primary"
+          class="forex-members-button button button--primary"
           {% if section.settings.button_link == blank %}
             role="link" aria-disabled="true"
           {% else %}
             href="{{ section.settings.button_link }}"
           {% endif %}
         >
-          {{ section.settings.button_label | escape }}
+          <p>{{ section.settings.button_label | escape }}</p>
         </a>
       {%- endif -%}
-      <p>{{ section.settings.button_caption }}</p>
+      <p class="forex-members-caption">{{ section.settings.button_caption }}</p>
     </div>
   </div>
 </div>
