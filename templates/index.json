@@ -68,12 +68,66 @@
         "mobile_content_alignment": "left",
         "padding_top": 100,
         "padding_bottom": 36,
-        "fill_color": "#00A453",
+        "fill_color": "#00a453",
         "stroke_color": "#000000"
+      }
+    },
+    "1da094e4-13e7-4ffe-91b9-0bced765d34d": {
+      "type": "forex-bragbars",
+      "blocks": {
+        "template--20764101017918__1da094e4-13e7-4ffe-91b9-0bced765d34d-column-1": {
+          "type": "column",
+          "settings": {
+            "title": "$230k",
+            "text": "<p>total profit from our members already earned via my trades<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--20764101017918__1da094e4-13e7-4ffe-91b9-0bced765d34d-column-2": {
+          "type": "column",
+          "settings": {
+            "title": "+3000",
+            "text": "<p>satisfied telegram members already copying my trades<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--20764101017918__1da094e4-13e7-4ffe-91b9-0bced765d34d-column-3": {
+          "type": "column",
+          "settings": {
+            "title": "20 mins.",
+            "text": "<p>satisfied telegram members already copying my trades<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--20764101017918__1da094e4-13e7-4ffe-91b9-0bced765d34d-column-1",
+        "template--20764101017918__1da094e4-13e7-4ffe-91b9-0bced765d34d-column-2",
+        "template--20764101017918__1da094e4-13e7-4ffe-91b9-0bced765d34d-column-3"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
   "order": [
-    "3b9a3921-f0d3-4572-84d3-4748d5c10b13"
+    "3b9a3921-f0d3-4572-84d3-4748d5c10b13",
+    "1da094e4-13e7-4ffe-91b9-0bced765d34d"
   ]
 }
