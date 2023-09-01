@@ -653,9 +653,10 @@ summary {
 
 summary .icon-caret {
   position: absolute;
-  height: 0.6rem;
+  height: 24px;
   right: 1.5rem;
-  top: calc(50% - 0.2rem);
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 summary::-webkit-details-marker {
