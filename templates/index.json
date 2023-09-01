@@ -351,6 +351,52 @@
         "padding_bottom": 36
       }
     },
+    "546ae435-f453-4c4c-8b1b-65445f90288f": {
+      "type": "forex-group",
+      "blocks": {
+        "template--20764101017918__546ae435-f453-4c4c-8b1b-65445f90288f-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Join Our Telegram Trading Group!",
+            "heading_size": "h1"
+          }
+        },
+        "template--20764101017918__546ae435-f453-4c4c-8b1b-65445f90288f-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Do you want to receive my daily trading ideas for free? I share them in my trading group every day from Monday to Friday, along with over 20,000 other people. You'll also get access to my chat community with members from around the world. We can learn, chat, and share knowledge together. Additionally, you'll receive a 5-hour trading course, all for free. Click the button below, send me a message, and I'll personally help you get started!<\/p>",
+            "text_style": "body"
+          }
+        },
+        "template--20764101017918__546ae435-f453-4c4c-8b1b-65445f90288f-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Join ELLJMV now!",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "template--20764101017918__546ae435-f453-4c4c-8b1b-65445f90288f-heading-1",
+        "template--20764101017918__546ae435-f453-4c4c-8b1b-65445f90288f-text-1",
+        "template--20764101017918__546ae435-f453-4c4c-8b1b-65445f90288f-button-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/phone.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "d29bcbdc-a3ab-4817-a5b1-1140c8ff86df": {
       "type": "forex-faq",
       "blocks": {
@@ -420,6 +466,7 @@
     "4a5aade7-6caf-4ae5-8848-38d0b769fc35",
     "90aedc63-248e-4c34-8526-74848bbbbe8c",
     "85e0ddfc-c28b-4302-99fa-f130f02e02e3",
+    "546ae435-f453-4c4c-8b1b-65445f90288f",
     "d29bcbdc-a3ab-4817-a5b1-1140c8ff86df"
   ]
 }

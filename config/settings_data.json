@@ -1,12 +1,13 @@
 {
   "current": {
-    "logo_width": 90,
+    "logo": "shopify:\/\/shop_images\/logo_a65655f1-c956-4733-bc44-b566775afcfa.png",
+    "logo_width": 190,
     "type_header_font": "helvetica_n4",
     "heading_scale": 100,
     "type_body_font": "helvetica_n4",
     "body_scale": 100,
     "page_width": 1300,
-    "spacing_sections": 0,
+    "spacing_sections": 80,
     "spacing_grid_horizontal": 8,
     "spacing_grid_vertical": 8,
     "buttons_border_thickness": 1,
