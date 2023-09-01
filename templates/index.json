@@ -294,6 +294,123 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "85e0ddfc-c28b-4302-99fa-f130f02e02e3": {
+      "type": "forex-world",
+      "blocks": {
+        "template--20764101017918__85e0ddfc-c28b-4302-99fa-f130f02e02e3-column-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/center-placeholder.svg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--20764101017918__85e0ddfc-c28b-4302-99fa-f130f02e02e3-column-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/center-placeholder.svg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--20764101017918__85e0ddfc-c28b-4302-99fa-f130f02e02e3-column-3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/center-placeholder.svg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--20764101017918__85e0ddfc-c28b-4302-99fa-f130f02e02e3-column-1",
+        "template--20764101017918__85e0ddfc-c28b-4302-99fa-f130f02e02e3-column-2",
+        "template--20764101017918__85e0ddfc-c28b-4302-99fa-f130f02e02e3-column-3"
+      ],
+      "settings": {
+        "title": "User from all over the world say",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "d29bcbdc-a3ab-4817-a5b1-1140c8ff86df": {
+      "type": "forex-faq",
+      "blocks": {
+        "template--20764101017918__d29bcbdc-a3ab-4817-a5b1-1140c8ff86df-collapsible_row-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What are forex signals?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "template--20764101017918__d29bcbdc-a3ab-4817-a5b1-1140c8ff86df-collapsible_row-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I receive the signals?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "template--20764101017918__d29bcbdc-a3ab-4817-a5b1-1140c8ff86df-collapsible_row-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do I need any prior experience to use ELLJMV Signals?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "template--20764101017918__d29bcbdc-a3ab-4817-a5b1-1140c8ff86df-collapsible_row-4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How can I use forex signals to make money?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--20764101017918__d29bcbdc-a3ab-4817-a5b1-1140c8ff86df-collapsible_row-1",
+        "template--20764101017918__d29bcbdc-a3ab-4817-a5b1-1140c8ff86df-collapsible_row-2",
+        "template--20764101017918__d29bcbdc-a3ab-4817-a5b1-1140c8ff86df-collapsible_row-3",
+        "template--20764101017918__d29bcbdc-a3ab-4817-a5b1-1140c8ff86df-collapsible_row-4"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "FAQ",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -301,6 +418,8 @@
     "1da094e4-13e7-4ffe-91b9-0bced765d34d",
     "47cd197b-d5ca-42b1-9ec4-0ab8dd9d7f85",
     "4a5aade7-6caf-4ae5-8848-38d0b769fc35",
-    "90aedc63-248e-4c34-8526-74848bbbbe8c"
+    "90aedc63-248e-4c34-8526-74848bbbbe8c",
+    "85e0ddfc-c28b-4302-99fa-f130f02e02e3",
+    "d29bcbdc-a3ab-4817-a5b1-1140c8ff86df"
   ]
 }
