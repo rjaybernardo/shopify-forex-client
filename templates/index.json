@@ -215,12 +215,92 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "90aedc63-248e-4c34-8526-74848bbbbe8c": {
+      "type": "forex-articles",
+      "blocks": {
+        "template--20764101017918__90aedc63-248e-4c34-8526-74848bbbbe8c-column-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/TechBullion.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--20764101017918__90aedc63-248e-4c34-8526-74848bbbbe8c-column-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Associated_Press.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--20764101017918__90aedc63-248e-4c34-8526-74848bbbbe8c-column-3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/marketwatch.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "9c474956-5289-4455-9b08-0bebd558184c": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/The-Times.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "62276849-f4d2-4422-ae34-134e716ce73f": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/yahoo_finance.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--20764101017918__90aedc63-248e-4c34-8526-74848bbbbe8c-column-1",
+        "template--20764101017918__90aedc63-248e-4c34-8526-74848bbbbe8c-column-2",
+        "template--20764101017918__90aedc63-248e-4c34-8526-74848bbbbe8c-column-3",
+        "9c474956-5289-4455-9b08-0bebd558184c",
+        "62276849-f4d2-4422-ae34-134e716ce73f"
+      ],
+      "settings": {
+        "title": "Articles from the press",
+        "caption": "Click on the logo to read the article",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 5,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "inverse",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "3b9a3921-f0d3-4572-84d3-4748d5c10b13",
     "1da094e4-13e7-4ffe-91b9-0bced765d34d",
     "47cd197b-d5ca-42b1-9ec4-0ab8dd9d7f85",
-    "4a5aade7-6caf-4ae5-8848-38d0b769fc35"
+    "4a5aade7-6caf-4ae5-8848-38d0b769fc35",
+    "90aedc63-248e-4c34-8526-74848bbbbe8c"
   ]
 }
