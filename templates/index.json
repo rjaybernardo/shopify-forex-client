@@ -178,11 +178,49 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "4a5aade7-6caf-4ae5-8848-38d0b769fc35": {
+      "type": "forex-free",
+      "blocks": {
+        "template--20764101017918__4a5aade7-6caf-4ae5-8848-38d0b769fc35-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Why is it free?",
+            "heading_size": "h1"
+          }
+        },
+        "template--20764101017918__4a5aade7-6caf-4ae5-8848-38d0b769fc35-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>I want to help everyone make money. Everyone should live their dream life. I've teamed up with a big trading platform. If we use it, my services are free. You just need some money to start. I'll guide you.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--20764101017918__4a5aade7-6caf-4ae5-8848-38d0b769fc35-heading-1",
+        "template--20764101017918__4a5aade7-6caf-4ae5-8848-38d0b769fc35-text-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/free.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "3b9a3921-f0d3-4572-84d3-4748d5c10b13",
     "1da094e4-13e7-4ffe-91b9-0bced765d34d",
-    "47cd197b-d5ca-42b1-9ec4-0ab8dd9d7f85"
+    "47cd197b-d5ca-42b1-9ec4-0ab8dd9d7f85",
+    "4a5aade7-6caf-4ae5-8848-38d0b769fc35"
   ]
 }
