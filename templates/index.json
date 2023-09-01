@@ -443,6 +443,72 @@
         "padding_bottom": 36
       }
     },
+    "4d1b1e93-4f97-4530-89db-2e5efb5ff90c": {
+      "type": "forex-about",
+      "blocks": {
+        "template--20764101017918__4d1b1e93-4f97-4530-89db-2e5efb5ff90c-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Who is ELLJMV?",
+            "heading_size": "h1"
+          }
+        },
+        "template--20764101017918__4d1b1e93-4f97-4530-89db-2e5efb5ff90c-icon-text-1": {
+          "type": "icon-text",
+          "settings": {
+            "icon-text": "A 26 year old professionel daytrader from Denmark"
+          }
+        },
+        "template--20764101017918__4d1b1e93-4f97-4530-89db-2e5efb5ff90c-icon-text-2": {
+          "type": "icon-text",
+          "settings": {
+            "icon-text": "I've been analysing the market since 2016"
+          }
+        },
+        "template--20764101017918__4d1b1e93-4f97-4530-89db-2e5efb5ff90c-icon-text-3": {
+          "type": "icon-text",
+          "settings": {
+            "icon-text": "I've run a copy trading group since start 2020"
+          }
+        },
+        "template--20764101017918__4d1b1e93-4f97-4530-89db-2e5efb5ff90c-icon-text-4": {
+          "type": "icon-text",
+          "settings": {
+            "icon-text": "I'm a full time day trader, who lives by day trading myself"
+          }
+        },
+        "1ac1370c-e9d2-4c01-80eb-6fad05c04773": {
+          "type": "icon-text",
+          "settings": {
+            "icon-text": "My team and I spend 50+ hours combined a week analysing the financial market, for our members"
+          }
+        }
+      },
+      "block_order": [
+        "template--20764101017918__4d1b1e93-4f97-4530-89db-2e5efb5ff90c-heading-1",
+        "template--20764101017918__4d1b1e93-4f97-4530-89db-2e5efb5ff90c-icon-text-1",
+        "template--20764101017918__4d1b1e93-4f97-4530-89db-2e5efb5ff90c-icon-text-2",
+        "template--20764101017918__4d1b1e93-4f97-4530-89db-2e5efb5ff90c-icon-text-3",
+        "template--20764101017918__4d1b1e93-4f97-4530-89db-2e5efb5ff90c-icon-text-4",
+        "1ac1370c-e9d2-4c01-80eb-6fad05c04773"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/elljmv.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "fill_color": "#00A453",
+        "stroke_color": "#000000"
+      }
+    },
     "d29bcbdc-a3ab-4817-a5b1-1140c8ff86df": {
       "type": "forex-faq",
       "blocks": {
@@ -514,6 +580,7 @@
     "85e0ddfc-c28b-4302-99fa-f130f02e02e3",
     "546ae435-f453-4c4c-8b1b-65445f90288f",
     "0ce94208-49c9-4e13-a107-0dccf56ad019",
+    "4d1b1e93-4f97-4530-89db-2e5efb5ff90c",
     "d29bcbdc-a3ab-4817-a5b1-1140c8ff86df"
   ]
 }
