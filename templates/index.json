@@ -1,60 +1,79 @@
 {
   "sections": {
-    "multicolumn": {
-      "type": "multicolumn",
+    "3b9a3921-f0d3-4572-84d3-4748d5c10b13": {
+      "type": "forex-banner",
       "blocks": {
-        "column1": {
-          "type": "column",
+        "template--20764101017918__3b9a3921-f0d3-4572-84d3-4748d5c10b13-heading-1": {
+          "type": "heading",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
+            "heading": "Join ELLJMV for Easy Forex Trading!",
+            "heading_size": "h1"
           }
         },
-        "column2": {
-          "type": "column",
+        "template--20764101017918__3b9a3921-f0d3-4572-84d3-4748d5c10b13-icon-text-1": {
+          "type": "icon-text",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
+            "icon-text": "85.7% Accuracy"
           }
         },
-        "column3": {
-          "type": "column",
+        "template--20764101017918__3b9a3921-f0d3-4572-84d3-4748d5c10b13-icon-text-2": {
+          "type": "icon-text",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
+            "icon-text": "Trade Anywhere, Anytime"
+          }
+        },
+        "template--20764101017918__3b9a3921-f0d3-4572-84d3-4748d5c10b13-icon-text-3": {
+          "type": "icon-text",
+          "settings": {
+            "icon-text": "Comprehensive Learning"
+          }
+        },
+        "template--20764101017918__3b9a3921-f0d3-4572-84d3-4748d5c10b13-icon-text-4": {
+          "type": "icon-text",
+          "settings": {
+            "icon-text": "Comprehensive Learning"
+          }
+        },
+        "template--20764101017918__3b9a3921-f0d3-4572-84d3-4748d5c10b13-icon-text-5": {
+          "type": "icon-text",
+          "settings": {
+            "icon-text": "Risk Management"
+          }
+        },
+        "template--20764101017918__3b9a3921-f0d3-4572-84d3-4748d5c10b13-icon-text-6": {
+          "type": "icon-text",
+          "settings": {
+            "icon-text": "Join Free!"
           }
         }
       },
       "block_order": [
-        "column1",
-        "column2",
-        "column3"
+        "template--20764101017918__3b9a3921-f0d3-4572-84d3-4748d5c10b13-heading-1",
+        "template--20764101017918__3b9a3921-f0d3-4572-84d3-4748d5c10b13-icon-text-1",
+        "template--20764101017918__3b9a3921-f0d3-4572-84d3-4748d5c10b13-icon-text-2",
+        "template--20764101017918__3b9a3921-f0d3-4572-84d3-4748d5c10b13-icon-text-3",
+        "template--20764101017918__3b9a3921-f0d3-4572-84d3-4748d5c10b13-icon-text-4",
+        "template--20764101017918__3b9a3921-f0d3-4572-84d3-4748d5c10b13-icon-text-5",
+        "template--20764101017918__3b9a3921-f0d3-4572-84d3-4748d5c10b13-icon-text-6"
       ],
       "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "third",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "background-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 100,
+        "padding_bottom": 36,
+        "fill_color": "#00A453",
+        "stroke_color": "#000000"
       }
     }
   },
   "order": [
-    "multicolumn"
+    "3b9a3921-f0d3-4572-84d3-4748d5c10b13"
   ]
 }
