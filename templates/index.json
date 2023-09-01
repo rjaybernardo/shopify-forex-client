@@ -397,6 +397,110 @@
         "padding_bottom": 36
       }
     },
+    "a080c97a-acc1-4420-be7b-33eedf3ba77a": {
+      "type": "forex-copy",
+      "blocks": {
+        "20d2f78b-04a0-4020-94a8-00e7b3fd3a2f": {
+          "type": "copy_header",
+          "settings": {
+            "copy_header": "Copying ELLJMV"
+          }
+        },
+        "c18c337c-ff2f-4067-9335-739270c683ec": {
+          "type": "copy_text",
+          "settings": {
+            "copy_text": "Copy, paste and profit my trading ideas for free"
+          }
+        },
+        "656d7d84-317a-4a7e-881c-f4cdf02c6465": {
+          "type": "copy_text",
+          "settings": {
+            "copy_text": "Absolutely NO experience is needed"
+          }
+        },
+        "b4f595f1-3ec4-48ae-9a21-8002ba8df13e": {
+          "type": "copy_text",
+          "settings": {
+            "copy_text": "Not very time consuming"
+          }
+        },
+        "16c08c6c-3572-4620-9dd4-55fac7baaa34": {
+          "type": "copy_text",
+          "settings": {
+            "copy_text": "Learn how to trade yourself for free"
+          }
+        },
+        "7f574244-04db-499f-b33f-359d12f1befc": {
+          "type": "copy_text",
+          "settings": {
+            "copy_text": "A phone or computer is all you need"
+          }
+        },
+        "bac01e59-5537-4147-ab71-50dc682407a3": {
+          "type": "trading_header",
+          "settings": {
+            "trading_header": "Trading yourself"
+          }
+        },
+        "10a8843f-3aeb-4b78-8d94-3b9b286e7a8b": {
+          "type": "trading_text",
+          "settings": {
+            "trading_text": "Spend 8+ hours a day analysing the market"
+          }
+        },
+        "91521c80-34aa-4d95-a707-06d418c77325": {
+          "type": "trading_text",
+          "settings": {
+            "trading_text": "Spend 8+ hours a day analysing the market"
+          }
+        },
+        "b91d17fa-c3f8-49a5-902c-ebd461257339": {
+          "type": "trading_text",
+          "settings": {
+            "trading_text": "VERY time consuming to do yourself"
+          }
+        },
+        "f6c119b9-51a3-423a-9301-828bd76a9399": {
+          "type": "trading_text",
+          "settings": {
+            "trading_text": "Spend thousands of $ and hours to learn yourself"
+          }
+        },
+        "939e46ef-29c9-465a-97d2-f5321302cdb4": {
+          "type": "trading_text",
+          "settings": {
+            "trading_text": "Need a trading setup and not just your phone"
+          }
+        }
+      },
+      "block_order": [
+        "20d2f78b-04a0-4020-94a8-00e7b3fd3a2f",
+        "c18c337c-ff2f-4067-9335-739270c683ec",
+        "656d7d84-317a-4a7e-881c-f4cdf02c6465",
+        "b4f595f1-3ec4-48ae-9a21-8002ba8df13e",
+        "16c08c6c-3572-4620-9dd4-55fac7baaa34",
+        "7f574244-04db-499f-b33f-359d12f1befc",
+        "bac01e59-5537-4147-ab71-50dc682407a3",
+        "10a8843f-3aeb-4b78-8d94-3b9b286e7a8b",
+        "91521c80-34aa-4d95-a707-06d418c77325",
+        "b91d17fa-c3f8-49a5-902c-ebd461257339",
+        "f6c119b9-51a3-423a-9301-828bd76a9399",
+        "939e46ef-29c9-465a-97d2-f5321302cdb4"
+      ],
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "0ce94208-49c9-4e13-a107-0dccf56ad019": {
       "type": "forex-course",
       "blocks": {
@@ -505,7 +609,7 @@
         "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 36,
-        "fill_color": "#00A453",
+        "fill_color": "#00a453",
         "stroke_color": "#000000"
       }
     },
@@ -579,6 +683,7 @@
     "90aedc63-248e-4c34-8526-74848bbbbe8c",
     "85e0ddfc-c28b-4302-99fa-f130f02e02e3",
     "546ae435-f453-4c4c-8b1b-65445f90288f",
+    "a080c97a-acc1-4420-be7b-33eedf3ba77a",
     "0ce94208-49c9-4e13-a107-0dccf56ad019",
     "4d1b1e93-4f97-4530-89db-2e5efb5ff90c",
     "d29bcbdc-a3ab-4817-a5b1-1140c8ff86df"
