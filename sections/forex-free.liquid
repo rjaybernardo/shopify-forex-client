@@ -14,40 +14,53 @@
   }
 {%- endstyle -%}
 <style>
-.forex-free-heading{
+  .forex-free-heading {
     font-size: 32px;
     font-weight: 700;
     line-height: 38.4px;
-    margin-bottom:15px;
-}
-.forex-free-text{
+    margin-bottom: 15px;
+  }
+  .forex-free-text {
     color: #333;
     font-size: 16px;
     line-height: 24px;
-}
-.forex-free-container{
-    display:flex;
-    align-items:center;
+  }
+  .forex-free-media {
+    order: 2;
+  }
+  .forex-free-container {
+    display: flex;
+    align-items: center;
     padding: 50px 34px 50px 50px;
-}
-.forex-free-grid--gapless{
+    order: 1;
+  }
+  .forex-free-grid--gapless {
     column-gap: 0;
     row-gap: 0;
     display: flex;
     align-items: center;
-}
-@media(min-width:750px){
-  .forex-free-page-width{
-    padding:0;
   }
-}
+  .forex-free-page-width {
+    padding: 0;
+  }
+  @media (min-width: 750px) {
+    .forex-free-media {
+      order: 1;
+    }
+    .forex-free-container {
+      display: flex;
+      align-items: center;
+      padding: 50px 34px 50px 50px;
+      order: 2;
+    }
+  }
 </style>
 
 {% assign scheme1 = settings.color_schemes | first %}
 
 <div class="image-with-text image-with-text--{{ section.settings.content_layout }} forex-free-page-width page-width isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless section.settings.color_scheme == scheme1 and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %} section-{{ section.id }}-padding{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
   <div class="image-with-text__grid grid forex-free-grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %}">
-    <div class="image-with-text__media-item image-with-text__media-item--{{ section.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }} grid__item">
+    <div class="forex-free-media image-with-text__media-item image-with-text__media-item--{{ section.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }} grid__item">
       <div
         class="image-with-text__media image-with-text__media--{{ section.settings.height }} gradient color-{{ section.settings.color_scheme }} global-media-settings {% if section.settings.image != blank %}media{% else %}image-with-text__media--placeholder placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}"
         {% if section.settings.height == 'adapt' and section.settings.image != blank %}
@@ -84,42 +97,42 @@
         class=" image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-{{ section.settings.desktop_content_alignment }} image-with-text__content--mobile-{{ section.settings.mobile_content_alignment }} image-with-text__content--{{ section.settings.height }} gradient color-{{ section.settings.color_scheme }} content-container"
       >
         <div>
-            {%- for block in section.blocks -%}
+          {%- for block in section.blocks -%}
             {% case block.type %}
-                {%- when 'heading' -%}
+              {%- when 'heading' -%}
                 <h2
-                    class="forex-free-heading image-with-text__heading inline-richtext {{ block.settings.heading_size }}"
-                    {{ block.shopify_attributes }}
+                  class="forex-free-heading image-with-text__heading inline-richtext {{ block.settings.heading_size }}"
+                  {{ block.shopify_attributes }}
                 >
-                    {{ block.settings.heading }}
+                  {{ block.settings.heading }}
                 </h2>
-                {%- when 'caption' -%}
+              {%- when 'caption' -%}
                 <p
-                    class="forex-free-text image-with-text__text image-with-text__text--caption {{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }} {{ block.settings.text_style }}"
-                    {{ block.shopify_attributes }}
+                  class="forex-free-text image-with-text__text image-with-text__text--caption {{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }} {{ block.settings.text_style }}"
+                  {{ block.shopify_attributes }}
                 >
-                    {{ block.settings.caption | escape }}
+                  {{ block.settings.caption | escape }}
                 </p>
-                {%- when 'text' -%}
+              {%- when 'text' -%}
                 <div class="image-with-text__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
-                    {{ block.settings.text }}
+                  {{ block.settings.text }}
                 </div>
-                {%- when 'button' -%}
+              {%- when 'button' -%}
                 {%- if block.settings.button_label != blank -%}
-                    <a
+                  <a
                     {% if block.settings.button_link == blank %}
-                        role="link" aria-disabled="true"
+                      role="link" aria-disabled="true"
                     {% else %}
-                        href="{{ block.settings.button_link }}"
+                      href="{{ block.settings.button_link }}"
                     {% endif %}
                     class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
                     {{ block.shopify_attributes }}
-                    >
+                  >
                     {{ block.settings.button_label | escape }}
-                    </a>
+                  </a>
                 {%- endif -%}
             {%- endcase -%}
-            {%- endfor -%}
+          {%- endfor -%}
         </div>
       </div>
     </div>
