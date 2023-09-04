@@ -109,14 +109,14 @@
         "template--20764101017918__1da094e4-13e7-4ffe-91b9-0bced765d34d-column-3"
       ],
       "settings": {
-        "title": "",
+        "mobile_text": "<p>Members earned $230 with my trades. <\/p><p>3,000 happy members on Telegram. <\/p><p>Spend 20 mins daily to earn big.<\/p>",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
         "columns_desktop": 3,
         "column_alignment": "left",
         "background_style": "primary",
-        "button_label": "",
+        "button_label": "Join the group now",
         "button_link": "",
         "color_scheme": "",
         "columns_mobile": "1",
