@@ -14,22 +14,21 @@
   }
 {%- endstyle -%}
 <style>
-.forex-copy-grid{
-    display:grid;
-    grid-template-columns: repeat(2,1fr);
-    gap:20px;
-    max-width:980px;
-    margin:0 auto;
-}
-.forex-copy-header{
-    color: #0D0D0D;
+  .forex-copy-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: min(90%, 980px);
+    margin: 0 auto;
+  }
+  .forex-copy-header {
+    color: #0d0d0d;
     font-size: 24px;
     font-weight: 700;
     line-height: 36px;
-    margin-bottom:20px;
-
-}
-.forex-copy-text{
+    margin-bottom: 20px;
+  }
+  .forex-copy-text {
     color: #333;
     font-size: 16px;
     font-weight: 400;
@@ -37,43 +36,48 @@
 
     display: flex;
     align-items: center;
-    gap:11px;
-    margin-bottom:15px;
-}
+    gap: 11px;
+    margin-bottom: 15px;
+  }
+  @media (min-width: 990px) {
+    .forex-copy-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 </style>
 {% assign scheme1 = settings.color_schemes | first %}
 
 <div class="image-with-text image-with-text--{{ section.settings.content_layout }} page-width isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless section.settings.color_scheme == scheme1 and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %} section-{{ section.id }}-padding{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
   <div class="image-with-text__grid forex-copy-grid grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %}">
     <!-- Copying column -->
-  <div class="">
-    {% for block in section.blocks %}
-      {% case block.type %}
-        {% when 'copy_header' %}
-          <h2 class="forex-copy-header">{{ block.settings.copy_header }}</h2>
-        {% when 'copy_text' %}
-          <div class="forex-copy-text">
-            {%- render 'icon-check' -%}
-            {{ block.settings.copy_text }}
-        </div>
-      {% endcase %}
-    {% endfor %}
-  </div>
+    <div class="">
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'copy_header' %}
+            <h2 class="forex-copy-header">{{ block.settings.copy_header }}</h2>
+          {% when 'copy_text' %}
+            <div class="forex-copy-text">
+              {%- render 'icon-check' -%}
+              {{ block.settings.copy_text }}
+            </div>
+        {% endcase %}
+      {% endfor %}
+    </div>
 
-  <!-- Trading column -->
-  <div class="">
-    {% for block in section.blocks %}
-      {% case block.type %}
-        {% when 'trading_header' %}
-          <h2 class="forex-copy-header">{{ block.settings.trading_header }}</h2>
-        {% when 'trading_text' %}
-          <div class="forex-copy-text">
-            {%- render 'icon-cross' -%}
-            {{ block.settings.trading_text }}
-        </div>
-      {% endcase %}
-    {% endfor %}
-  </div>
+    <!-- Trading column -->
+    <div class="">
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'trading_header' %}
+            <h2 class="forex-copy-header">{{ block.settings.trading_header }}</h2>
+          {% when 'trading_text' %}
+            <div class="forex-copy-text">
+              {%- render 'icon-cross' -%}
+              {{ block.settings.trading_text }}
+            </div>
+        {% endcase %}
+      {% endfor %}
+    </div>
   </div>
 </div>
 
@@ -424,54 +428,54 @@
         }
       ]
     },
-  {
-        "type": "copy_header",
-        "name": "Copy Header",
-        "settings": [
-          {
-            "type": "text",
-            "id": "copy_header",
-            "label": "Copy Header",
-            "default": "Copy Header"
-          }
-        ]
-      },
-      {
-        "type": "copy_text",
-        "name": "Copy Text",
-        "settings": [
-          {
-            "type": "text",
-            "id": "copy_text",
-            "label": "Copy Text",
-            "default": "Copy Text"
-          }
-        ]
-      },
-      {
-        "type": "trading_header",
-        "name": "Trading Header",
-        "settings": [
-          {
-            "type": "text",
-            "id": "trading_header",
-            "label": "Trading Header",
-            "default": "Trading header"
-          }
-        ]
-      },
-      {
-        "type": "trading_text",
-        "name": "Trading Text",
-        "settings": [
-          {
-            "type": "text",
-            "id": "trading_text",
-            "label": "Trading Text",
-            "default": "Trading text"
-          }
-        ]
-      }
+    {
+      "type": "copy_header",
+      "name": "Copy Header",
+      "settings": [
+        {
+          "type": "text",
+          "id": "copy_header",
+          "label": "Copy Header",
+          "default": "Copy Header"
+        }
+      ]
+    },
+    {
+      "type": "copy_text",
+      "name": "Copy Text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "copy_text",
+          "label": "Copy Text",
+          "default": "Copy Text"
+        }
+      ]
+    },
+    {
+      "type": "trading_header",
+      "name": "Trading Header",
+      "settings": [
+        {
+          "type": "text",
+          "id": "trading_header",
+          "label": "Trading Header",
+          "default": "Trading header"
+        }
+      ]
+    },
+    {
+      "type": "trading_text",
+      "name": "Trading Text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "trading_text",
+          "label": "Trading Text",
+          "default": "Trading text"
+        }
+      ]
+    }
   ],
   "presets": [
     {
