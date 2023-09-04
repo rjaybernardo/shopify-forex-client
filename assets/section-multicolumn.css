@@ -93,7 +93,8 @@
   width: auto;
 }
 
-.multicolumn-list__item.center .media--adapt img {
+.multicolumn-list__item.center .media--adapt img,
+.multicolumn-list__item.center .media--adapt video {
   left: 50%;
   transform: translateX(-50%);
 }
