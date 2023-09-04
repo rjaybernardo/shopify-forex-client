@@ -1,39 +1,50 @@
 {{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.3 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.3 | round: 0 }}px;
-  }
+  .forex-banner-page-width{
+     padding-top: {{ section.settings.padding_top | times: 0 }}px;
+   }
+   .section-{{ section.id }}-padding {
+     padding-bottom: {{ section.settings.padding_bottom | times: 0.3 | round: 0 }}px;
+   }
 
-  .icon-text-forex-banner svg #Vector {
-    fill: {{ section.settings.fill_color }};
-    stroke: {{ section.settings.fill_color }};
-  }
-  .icon-text-forex-banner svg #Vector_2 {
-    stroke: {{ section.settings.stroke_color }};
-  }
+   .icon-text-forex-banner svg #Vector {
+     fill: {{ section.settings.fill_color }};
+     stroke: {{ section.settings.fill_color }};
+   }
+   .icon-text-forex-banner svg #Vector_2 {
+     stroke: {{ section.settings.stroke_color }};
+   }
 
-  @media screen and (min-width: 750px) {
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
-  }
+   @media screen and (min-width: 750px) {
+     .section-{{ section.id }}-padding {
+       padding-top: {{ section.settings.padding_top }}px;
+       padding-bottom: {{ section.settings.padding_bottom }}px;
+     }
+   .forex-banner-page-width{
+     padding-top: {{ section.settings.padding_top | times: 1 }}px;
+   }
+
+   }
 {%- endstyle -%}
 <style>
+  .forex-banner-page-width{
+    padding-left:0;
+    padding-right:0;
+    }
   p {
     padding: 0;
     margin: 0;
   }
   .forex-banner-heading {
     color: #0d0d0d;
-    font-size: 48px;
+    font-size: clamp(32px,5vw,48px);
     font-style: normal;
     font-weight: 700;
+    text-align:center;
     line-height: 110%;
     text-transform: uppercase;
-    max-width: 463px;
+    max-width: 100%;
     margin-top: 0;
   }
   .section {
@@ -72,8 +83,19 @@
   .icon-text-multi-column {
     column-count: 2; /* Set the number of columns */
     column-gap: 20px; /* Adjust the gap between columns as needed */
+    padding: 0 1.5rem;
+    margin:0 auto;
   }
   @media (min-width: 750px) {
+
+    .icon-text-multi-column {
+        margin:0 ;
+    }
+    .forex-banner-heading {
+      line-height: 110%;
+      max-width: 463px;
+      margin-top: 0;
+    }
     .icon-text-grid-container {
       display: grid;
       grid-template-columns: 1fr 1fr; /* 2 columns */
@@ -106,9 +128,9 @@
 
 {% assign scheme1 = settings.color_schemes | first %}
 <div class="section color-{{ section.settings.color_scheme }} ">
-  <div class="image-with-text image-with-text--{{ section.settings.content_layout }} page-width isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless section.settings.color_scheme == scheme1 and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %} section-{{ section.id }}-padding{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+  <div class="image-with-text image-with-text--{{ section.settings.content_layout }} forex-banner-page-width page-width isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless section.settings.color_scheme == scheme1 and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %} section-{{ section.id }}-padding{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
     <div class="image-with-text__grid grid grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %}">
-      <div class="image-with-text__media-item image-with-text__media-item--{{ section.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }} grid__item">
+      <div class="forex-banner-media image-with-text__media-item image-with-text__media-item--{{ section.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }} grid__item">
         <div
           class="forex-banner-container  image-with-text__media--{{ section.settings.height }} gradient color-{{ section.settings.color_scheme }} global-media-settings {% if section.settings.image != blank %}media{% else %}image-with-text__media--placeholder placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}"
           style="padding-bottom: 56.25%; position: relative;"
