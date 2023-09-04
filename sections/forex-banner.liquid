@@ -116,7 +116,7 @@
           {% if section.settings.video != null %}
             {{ section.settings.video | video_tag: autoplay: true, loop: false, muted: false, controls: true }}
           {%- else -%}
-            {{ 'collection-2' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+            {% render 'icon-video-landscape' %}
           {% endif %}
         </div>
       </div>

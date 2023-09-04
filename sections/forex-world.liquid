@@ -38,6 +38,11 @@
   }
   .forex-multicolumn-list {
     display: block;
+    gap: 10px;
+  }
+  .forex-world-card {
+    display: flex;
+    justify-content: center;
   }
 </style>
 {%- liquid
@@ -99,7 +104,7 @@
               data-cascadestyle="--animation-order: {{ forloop.index }};"
             {% endif %}
           >
-            <div class=" multicolumn-card content-container">
+            <div class=" forex-world-card multicolumn-card content-container">
               {% if block.settings.video != null %}
                 {{
                   block.settings.video
@@ -111,7 +116,7 @@
                     class: 'multicolumn-card__image '
                 }}
               {%- else -%}
-                {{ 'collection-2' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+                {% render 'icon-video-portrait' %}
               {% endif %}
             </div>
           </li>
