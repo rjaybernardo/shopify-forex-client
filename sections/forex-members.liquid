@@ -6,7 +6,9 @@
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
-
+  .forex-member-container {
+    background-image(url('{{ section.settings.background }}'))
+  }
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
@@ -15,31 +17,117 @@
   }
 {%- endstyle -%}
 <style>
-    .forex-members-title{
-        margin: 0 auto;
-        color: #0D0D0D;
-        font-size: 32px;
-        font-weight: 700;
-        line-height: 38.4px;
-    }
-    .forex-members-button p{
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 18px; 
-        letter-spacing: 0.6px;
-        text-transform: uppercase;
-    }
-    .forex-members-button{
-        margin-bottom: 7px;
-    }
-    .forex-members-caption{
-        color: #333;
-        font-size: 16px;
-        font-style: italic;
-        line-height: 24px;
-    }
+  .forex-members-title {
+    margin: 0 auto;
+    color: #0d0d0d;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38.4px;
+  }
+  .forex-members-button p {
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+  }
+  .forex-members-button {
+    margin-bottom: 7px;
+  }
+  .forex-members-caption {
+    color: #333;
+    font-size: 16px;
+    font-style: italic;
+    line-height: 24px;
+  }
+  forex-multicolumn-list {
+    display: block;
+    gap: 10px;
+  }
+  .forex-members-card {
+    display: flex;
+    justify-content: center;
+  }
+  .forex-member-container {
+    background: black;
+    border-radius: 10px;
+    gap: 10px;
+    padding: 0;
+    margin-top: 45px;
+    position: relative;
+  }
+  .forex-member-card-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .forex-member-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.1;
+    z-index: -1;
+  }
+  .member-image {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    margin: -45px auto 0;
+    overflow: hidden;
+    background: gray;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .member-image img {
+    position: absolute;
+    z-index: 9;
+  }
+  .member-info {
+    text-align: center;
+    color: #f8f8f8;
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 9px;
+  }
+  .member-info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+  }
+
+  .member-info-grid-item {
+    text-align: center;
+    font-size: 15px;
+    line-height: 24px;
+    padding: 15px;
+  }
+  /* Add border between columns */
+  .member-info-grid-item:first-child,
+  .member-info-grid-item:nth-child(3) {
+    border-right: 1px solid white;
+  }
+
+  /* Add border between rows */
+  .member-info-grid-item:nth-child(3),
+  .member-info-grid-item:nth-child(4) {
+    border-top: 1px solid white;
+  }
+  .member-info-text {
+    color: #f8f8f8;
+    font-weight: 400;
+  }
+  .member-info-bold {
+    color: #6ad09d;
+    font-weight: 700;
+  }
 </style>
 {%- liquid
   assign columns_mobile_int = section.settings.columns_mobile | plus: 0
@@ -61,11 +149,6 @@
         <h2 class="forex-members-title  inline-richtext {{ section.settings.heading_size }}">
           {{ section.settings.title }}
         </h2>
-        {%- if section.settings.button_label != blank and show_mobile_slider -%}
-          <a href="{{ section.settings.button_link }}" class="link underlined-link large-up-hide">
-           {{- section.settings.button_label | escape -}}
-          </a>
-        {%- endif -%}
       </div>
     {%- endunless -%}
     <slider-component class="slider-mobile-gutter">
@@ -94,77 +177,51 @@
 
           <li
             id="Slide-{{ section.id }}-{{ forloop.index }}"
-            class="multicolumn-list__item grid__item{% if section.settings.swipe_on_mobile %} slider__slide{% endif %}{% if section.settings.column_alignment == 'center' %} center{% endif %}{{ empty_column }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            class="forex-multicolumn-list multicolumn-list__item grid__item{% if section.settings.swipe_on_mobile %} slider__slide{% endif %}{% if section.settings.column_alignment == 'center' %} center{% endif %}{{ empty_column }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
             {{ block.shopify_attributes }}
             {% if settings.animations_reveal_on_scroll %}
               data-cascade
               style="--animation-order: {{ forloop.index }};"
             {% endif %}
           >
-            <div class="multicolumn-card content-container">
-              {%- if block.settings.image != blank -%}
-                {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
-                  {% assign spaced_image = true %}
-                {% endif %}
-                <div class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper--{{ section.settings.image_width }}-width{% if section.settings.image_width != 'full' or spaced_image %} multicolumn-card-spacing{% endif %}">
-                  <div
-                    class="media media--transparent media--{{ section.settings.image_ratio }}"
-                    {% if section.settings.image_ratio == 'adapt' %}
-                      style="padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%;"
-                    {% endif %}
-                  >
-                    {%- liquid
-                      assign number_of_columns = section.settings.columns_desktop
-                      assign number_of_columns_mobile = section.settings.columns_mobile
-                      assign grid_space_desktop = number_of_columns | minus: 1 | times: settings.spacing_grid_horizontal | plus: 100 | append: 'px'
-                      assign grid_space_tablet = number_of_columns_mobile | minus: 1 | times: settings.spacing_grid_horizontal | plus: 100 | append: 'px'
-                      assign grid_space_mobile = number_of_columns_mobile | minus: 1 | times: settings.spacing_grid_horizontal | divided_by: 2 | plus: 30 | append: 'px'
-                      if section.settings.image_width == 'half'
-                        assign image_width = 0.5
-                      elsif section.settings.image_width == 'third'
-                        assign image_width = 0.33
-                      else
-                        assign image_width = 1
-                      endif
-                    -%}
-                    {% capture sizes %}
-                      (min-width: {{ settings.page_width }}px) calc(({{ settings.page_width }}px - {{ grid_space_desktop }}) * {{ image_width }} /  {{ number_of_columns }}),
-                      (min-width: 990px) calc((100vw - {{ grid_space_desktop }}) * {{ image_width }} / {{ number_of_columns }}),
-                      (min-width: 750px) calc((100vw - {{ grid_space_tablet }}) * {{ image_width }} / {{ number_of_columns_mobile }}),
-                      calc((100vw - {{ grid_space_mobile }}) * {{ image_width }} / {{ number_of_columns_mobile }})
-                    {% endcapture %}
-                    {{
-                      block.settings.image
-                      | image_url: width: 3200
-                      | image_tag:
-                        loading: 'lazy',
-                        widths: '50, 75, 100, 150, 200, 300, 400, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750, 3000, 3200',
-                        sizes: sizes,
-                        class: 'multicolumn-card__image'
-                    }}
+            <div class="forex-members-card multicolumn-card content-container">
+              <div
+                class="forex-member-container"
+              >
+                <div class="forex-member-card-image">
+                  {%- if section.settings.background != blank -%}
+                    {{ section.settings.background | image_url: width: 500, height: 500 | image_tag }}
+                  {%- endif -%}
+                </div>
+                {%- if block.settings.image != blank -%}
+                  <div class="member-image">
+                    {{ block.settings.image | image_url: width: 90 | image_tag }}
+                  </div>
+                {%- else -%}
+                  <div class="member-image">img</div>
+                {%- endif -%}
+                <h3 class="member-info">
+                  {{ block.settings.name }}, {{ block.settings.age }}
+                  <span>{{ block.settings.location }}</span>
+                </h3>
+                <div class="member-info-grid">
+                  <div class="member-info-grid-item">
+                    <p class="member-info-text">Member for:</p>
+                    <p class="member-info-bold">{{ block.settings.duration }}</p>
+                  </div>
+                  <div class="member-info-grid-item">
+                    <p class="member-info-text">Time spend:</p>
+                    <p class="member-info-bold">{{ block.settings.elapsed }}</p>
+                  </div>
+                  <div class="member-info-grid-item">
+                    <p class="member-info-text">Start deposit:</p>
+                    <p class="member-info-bold">{{ block.settings.deposit }}</p>
+                  </div>
+                  <div class="member-info-grid-item">
+                    <p class="member-info-text">Current balance:</p>
+                    <p class="member-info-bold">{{ block.settings.balance }}</p>
                   </div>
                 </div>
-              {%- endif -%}
-              <div class="multicolumn-card__info">
-                {%- if block.settings.title != blank -%}
-                  <h3 class="inline-richtext">{{ block.settings.title }}</h3>
-                {%- endif -%}
-                {%- if block.settings.text != blank -%}
-                  <div class="rte">{{ block.settings.text }}</div>
-                {%- endif -%}
-                {%- if block.settings.link_label != blank -%}
-                  <a
-                    class="link animate-arrow"
-                    {% if block.settings.link == blank %}
-                      role="link" aria-disabled="true"
-                    {% else %}
-                      href="{{ block.settings.link }}"
-                    {% endif %}
-                  >
-                    {{- block.settings.link_label | escape -}}
-                    <span class="icon-wrap">&nbsp;{% render 'icon-arrow' %}</span></a
-                  >
-                {%- endif -%}
               </div>
             </div>
           </li>
@@ -198,7 +255,7 @@
         </div>
       {%- endif -%}
     </slider-component>
-    <div class="center{% if show_mobile_slider %} small-hide medium-hide{% endif %}">
+    <div class="center">
       {%- if section.settings.button_label != blank -%}
         <a
           class="forex-members-button button button--primary"
@@ -225,6 +282,11 @@
     "groups": ["header", "footer"]
   },
   "settings": [
+    {
+      "type": "image_picker",
+      "id": "background",
+      "label": "Card background image"
+    },
     {
       "type": "inline_richtext",
       "id": "title",
@@ -412,35 +474,54 @@
   ],
   "blocks": [
     {
-      "type": "column",
-      "name": "t:sections.multicolumn.blocks.column.name",
+      "type": "forex_member",
+      "name": "Forex Member",
       "settings": [
         {
           "type": "image_picker",
           "id": "image",
-          "label": "t:sections.multicolumn.blocks.column.settings.image.label"
-        },
-        {
-          "type": "inline_richtext",
-          "id": "title",
-          "default": "Column",
-          "label": "t:sections.multicolumn.blocks.column.settings.title.label"
-        },
-        {
-          "type": "richtext",
-          "id": "text",
-          "default": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-          "label": "t:sections.multicolumn.blocks.column.settings.text.label"
+          "label": "Member Image"
         },
         {
           "type": "text",
-          "id": "link_label",
-          "label": "t:sections.multicolumn.blocks.column.settings.link_label.label"
+          "id": "name",
+          "default": "Name",
+          "label": "Name"
         },
         {
-          "type": "url",
-          "id": "link",
-          "label": "t:sections.multicolumn.blocks.column.settings.link.label"
+          "type": "number",
+          "id": "age",
+          "label": "Age"
+        },
+        {
+          "type": "text",
+          "id": "location",
+          "default": "Location",
+          "label": "Location"
+        },
+        {
+          "type": "text",
+          "id": "duration",
+          "default": "Duration",
+          "label": "Member for"
+        },
+        {
+          "type": "text",
+          "id": "elapsed",
+          "default": "hr per day",
+          "label": "Time spend"
+        },
+        {
+          "type": "text",
+          "id": "deposit",
+          "default": "deposit",
+          "label": "Start Deposit"
+        },
+        {
+          "type": "text",
+          "id": "balance",
+          "default": "balance",
+          "label": "Current balance"
         }
       ]
     }
@@ -450,13 +531,16 @@
       "name": "Forex Members",
       "blocks": [
         {
-          "type": "column"
+          "type": "forex_member"
         },
         {
-          "type": "column"
+          "type": "forex_member"
         },
         {
-          "type": "column"
+          "type": "forex_member"
+        },
+        {
+          "type": "forex_member"
         }
       ]
     }
