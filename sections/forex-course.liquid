@@ -14,25 +14,45 @@
   }
 {%- endstyle -%}
 <style>
-.forex-course-header{
+  .forex-course-header {
     font-size: 32px;
     font-weight: 700;
     line-height: 38.4px;
-}
-.forex-course-text{
+  }
+  .forex-course-text {
     font-size: 16px;
     line-height: 24px;
-}
-.forex-course-button{
+  }
+  .forex-course-button {
     font-size: 15px;
     font-weight: 700;
     line-height: 15px;
     letter-spacing: 0.6px;
     text-transform: uppercase;
-}
-.forex-course-image img{
+    width: 100%;
+  }
+  .forex-course-image img {
     object-fit: contain;
-}
+  }
+  .forex-course-image-with-text {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-self: center;
+    padding: 4rem 0 5rem;
+    position: relative;
+    z-index: 1;
+  }
+  @media (min-width: 750px) {
+    .forex-course-image-with-text {
+      padding: 4rem calc(4rem / var(--font-body-scale)) 5rem;
+    }
+    .forex-course-button {
+      width: auto;
+    }
+  }
 </style>
 {% assign scheme1 = settings.color_schemes | first %}
 
@@ -72,7 +92,7 @@
     <div class="image-with-text__text-item grid__item">
       <div
         id="ImageWithText--{{ section.id }}"
-        class="image-with-text__content image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-{{ section.settings.desktop_content_alignment }} image-with-text__content--mobile-{{ section.settings.mobile_content_alignment }} image-with-text__content--{{ section.settings.height }} gradient color-{{ section.settings.color_scheme }} content-container"
+        class="forex-course-image-with-text"
       >
         {%- for block in section.blocks -%}
           {% case block.type %}
@@ -91,7 +111,10 @@
                 {{ block.settings.caption | escape }}
               </p>
             {%- when 'text' -%}
-              <div class="forex-course-text image-with-text__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
+              <div
+                class="forex-course-text image-with-text__text rte {{ block.settings.text_style }}"
+                {{ block.shopify_attributes }}
+              >
                 {{ block.settings.text }}
               </div>
             {%- when 'button' -%}

@@ -15,29 +15,38 @@
   }
 {%- endstyle -%}
 <style>
+      .forex-article-container{
+          border-radius: 0px;
+          margin-top:-5px;
+          margin-bottom:80px;
+          background:black;
+      }
+      .forex-article-header{
+          text-align:center;
+          font-size: 32px;
+          font-weight: 700;
+          line-height: 38.4px;
+      }
+      .forex-article-caption{
+          font-size: 16px;
+          line-height: 25.6px;
+      }
+  .forex-article-title-wrapper-with-link{
+      display: flex;
+      {% comment %} justify-content: center; {% endcomment %}
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+      flex-direction: column;
+  }
+  @media(min-width:750px){
     .forex-article-container{
-        border-radius: 10px;
-        margin-top:50px;
-        margin-bottom:80px;
-    }
-    .forex-article-header{
-        font-size: 32px;
-        font-weight: 700;
-        line-height: 38.4px;
-    }
-    .forex-article-caption{
-        font-size: 16px;
-        line-height: 25.6px; 
-    }
-.forex-article-title-wrapper-with-link{
-    display: flex;
-    {% comment %} justify-content: center; {% endcomment %}
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 3rem;
-    flex-wrap: wrap;
-    flex-direction: column;
-}
+      border-radius: 10px;
+      margin-top:50px;
+      margin-bottom:80px;
+  }
+  }
 </style>
 {%- liquid
   assign columns_mobile_int = section.settings.columns_mobile | plus: 0
