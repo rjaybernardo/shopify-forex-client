@@ -128,38 +128,60 @@
     "47cd197b-d5ca-42b1-9ec4-0ab8dd9d7f85": {
       "type": "forex-members",
       "blocks": {
-        "template--20764101017918__47cd197b-d5ca-42b1-9ec4-0ab8dd9d7f85-column-1": {
-          "type": "column",
+        "5212ea2f-0994-4e4c-bf23-85ce10d77e21": {
+          "type": "forex_member",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
+            "name": "John",
+            "age": 26,
+            "location": "Denmark",
+            "duration": "3 weeks",
+            "elapsed": "1 hour per day",
+            "deposit": "400$",
+            "balance": "852$"
           }
         },
-        "template--20764101017918__47cd197b-d5ca-42b1-9ec4-0ab8dd9d7f85-column-2": {
-          "type": "column",
+        "7958fa9e-ce52-4df8-8318-d2551fddd6f9": {
+          "type": "forex_member",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
+            "name": "Ruth",
+            "age": 30,
+            "location": "Canada",
+            "duration": "4 weeks",
+            "elapsed": "2\/3 hours per day",
+            "deposit": "500$",
+            "balance": "2.500$"
           }
         },
-        "template--20764101017918__47cd197b-d5ca-42b1-9ec4-0ab8dd9d7f85-column-3": {
-          "type": "column",
+        "6ab506bf-77e3-4129-932a-b1e3fe59a3aa": {
+          "type": "forex_member",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
+            "name": "Tomo",
+            "age": 21,
+            "location": "Africa",
+            "duration": "3 months",
+            "elapsed": "30 min per day",
+            "deposit": "400$",
+            "balance": "+1.200$"
+          }
+        },
+        "dcd39639-881c-47a0-b162-12215d7477f5": {
+          "type": "forex_member",
+          "settings": {
+            "name": "Em",
+            "age": 23,
+            "location": "South America",
+            "duration": "3months",
+            "elapsed": "20 min per day",
+            "deposit": "300$",
+            "balance": "4.000$"
           }
         }
       },
       "block_order": [
-        "template--20764101017918__47cd197b-d5ca-42b1-9ec4-0ab8dd9d7f85-column-1",
-        "template--20764101017918__47cd197b-d5ca-42b1-9ec4-0ab8dd9d7f85-column-2",
-        "template--20764101017918__47cd197b-d5ca-42b1-9ec4-0ab8dd9d7f85-column-3"
+        "5212ea2f-0994-4e4c-bf23-85ce10d77e21",
+        "7958fa9e-ce52-4df8-8318-d2551fddd6f9",
+        "6ab506bf-77e3-4129-932a-b1e3fe59a3aa",
+        "dcd39639-881c-47a0-b162-12215d7477f5"
       ],
       "settings": {
         "title": "Results from awesome members",
@@ -167,7 +189,7 @@
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
-        "columns_desktop": 3,
+        "columns_desktop": 4,
         "column_alignment": "left",
         "background_style": "primary",
         "button_label": "Join the group now",
@@ -289,7 +311,7 @@
         "button_label": "",
         "button_link": "",
         "color_scheme": "inverse",
-        "columns_mobile": "1",
+        "columns_mobile": "2",
         "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
