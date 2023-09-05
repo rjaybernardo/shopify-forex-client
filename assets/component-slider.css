@@ -38,7 +38,7 @@ slider-component.slider-component-full-width {
   padding-bottom: 0;
 }
 
-.slider__slide[aria-hidden="true"] {
+.slider__slide[aria-hidden='true'] {
   visibility: hidden;
 }
 
@@ -333,7 +333,11 @@ slider-component.slider-component-full-width {
 .slider-buttons {
   display: flex;
   align-items: center;
-  justify-content: center;
+  width: 100%;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 @media screen and (min-width: 990px) {
@@ -360,10 +364,11 @@ slider-component.slider-component-full-width {
   border: none;
   cursor: pointer;
   width: 44px;
+  /* width: 100%; */
   height: 44px;
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between; */
 }
 
 .slider-button:not([disabled]):hover {
@@ -371,7 +376,7 @@ slider-component.slider-component-full-width {
 }
 
 .slider-button .icon {
-  height: 0.6rem;
+  height: 18px;
 }
 
 .slider-button[disabled] .icon {
@@ -381,10 +386,12 @@ slider-component.slider-component-full-width {
 
 .slider-button--next .icon {
   transform: rotate(-90deg);
+  right: 10px;
 }
 
 .slider-button--prev .icon {
   transform: rotate(90deg);
+  left: 10px;
 }
 
 .slider-button--next:not([disabled]):hover .icon {
