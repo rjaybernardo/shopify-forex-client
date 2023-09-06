@@ -25,17 +25,12 @@
     text-align: center;
 
     color: 0D0D0D;
-    font-size: 32px;
+    font-size: clamp(26px, 3.6vw, 32px);
     font-weight: 700;
     line-height: 38.4px;
   }
   .forex-world-header::after {
-    content: '';
-    display: block;
-    height: 2px;
-    width: 120px;
-    margin: 15px auto 0;
-    background-color: black;
+    display: none;
   }
   .forex-multicolumn-list {
     display: block;
@@ -44,6 +39,26 @@
   .forex-world-card {
     display: flex;
     justify-content: center;
+  }
+  @media (min-width: 750px) {
+    .forex-world-header {
+      margin: 0 auto;
+      position: relative;
+      text-align: center;
+
+      color: 0D0D0D;
+      font-size: clamp(26px, 3.6vw, 32px);
+      font-weight: 700;
+      line-height: 38.4px;
+    }
+    .forex-world-header::after {
+      content: '';
+      display: block;
+      height: 2px;
+      width: 120px;
+      margin: 15px auto 20px;
+      background-color: black;
+    }
   }
 </style>
 {%- liquid
