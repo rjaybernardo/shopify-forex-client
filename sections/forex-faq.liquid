@@ -6,13 +6,14 @@
     padding-top: {{ section.settings.padding_top | times: 0.3 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.3 | round: 0 }}px;
   }
-
-  @media screen and (min-width: 750px) {
-    .section-forex-faq {
+  .section-forex-faq {
     background-image: url('{{ 'bg-map.png' | asset_url }}');
     background-repeat: no-repeat;
     background-size: cover;
   }
+
+  @media screen and (min-width: 750px) {
+
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;

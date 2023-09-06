@@ -6,22 +6,20 @@
     padding-bottom: {{ section.settings.padding_bottom | times: 0.3 | round: 0 }}px;
   }
   .icon-text-problem svg #Vector {
-    fill: {{ section.settings.fill_color}}
-    ;
-    stroke: {{ section.settings.fill_color}}
-    ;
+    fill: {{ section.settings.fill_color }};
+    stroke: {{ section.settings.fill_color }};
   }
   .icon-text-problem svg #Vector_2 {
-    stroke: {{ section.settings.stroke_color}}
-    ;
+    stroke: {{ section.settings.stroke_color }};
   }
-
-  @media screen and (min-width: 750px) {
-    .section-forex-about {
+  .section-forex-about {
     background-image: url('{{ 'bg-graph.png' | asset_url }}');
     background-repeat: no-repeat;
     background-size: cover;
   }
+
+  @media screen and (min-width: 750px) {
+
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}
       px;
