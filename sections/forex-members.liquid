@@ -7,12 +7,16 @@
     padding-bottom: {{ section.settings.padding_bottom | times: 0.3 | round: 0 }}px;
   }
   .forex-member-container {
-    background-image(url('{{ section.settings.background }}'))
   }
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+    .section-forex-member{
+      background-image: url('{{ 'bg-map.png' | asset_url }}');
+    background-repeat: no-repeat;
+    background-size: cover;
     }
   }
 {%- endstyle -%}
@@ -58,7 +62,9 @@
     padding: 0;
     margin-top: 45px;
     position: relative;
+    opacity: 0.9;
   }
+
   .forex-member-card-image {
     position: absolute;
     top: 0;
@@ -66,13 +72,12 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
+    z-index: -1;
   }
   .forex-member-card-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.1;
-    z-index: -1;
   }
   .member-image {
     width: 90px;
@@ -159,7 +164,7 @@
 
 <div class="multicolumn color-{{ section.settings.color_scheme }} gradient{% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %}">
   <div
-    class="page-width section-{{ section.id }}-padding isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+    class="section-forex-member page-width section-{{ section.id }}-padding isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
     {% if settings.animations_reveal_on_scroll %}
       data-cascade
     {% endif %}
@@ -209,9 +214,13 @@
                 class="forex-member-container"
               >
                 <div class="forex-member-card-image">
-                  {%- if section.settings.background != blank -%}
-                    {{ section.settings.background | image_url: width: 500, height: 500 | image_tag }}
-                  {%- endif -%}
+                  <img
+                    src="{{ 'bg-card.png' | asset_url }}"
+                    width="auto"
+                    height="auto"
+                    alt="example"
+                    loading="lazy"
+                  >
                 </div>
                 {%- if block.settings.image != blank -%}
                   <div class="member-image">
@@ -255,7 +264,7 @@
             class="slider-button slider-button--prev"
             name="previous"
             aria-label="{{ 'general.slider.previous_slide' | t }}"
-            style="padding:3px;border-radius:50%;background:#fff;opacity:0.5"
+            {% comment %} style="padding:3px;border-radius:50%;background:#fff;opacity:0.5" {% endcomment %}
           >
             {% render 'icon-caret' %}
           </button>
@@ -264,7 +273,7 @@
             class="slider-button slider-button--next"
             name="next"
             aria-label="{{ 'general.slider.next_slide' | t }}"
-            style="padding:3px;border-radius:50%;background:#fff;opacity:0.5"
+            {% comment %} style="padding:3px;border-radius:50%;background:#fff;opacity:0.5" {% endcomment %}
           >
             {% render 'icon-caret' %}
           </button>
