@@ -15,9 +15,10 @@
 {%- endstyle -%}
 <style>
   .forex-course-header {
-    font-size: 32px;
+    font-size: clamp(24px, 3.5vw, 32px);
     font-weight: 700;
-    line-height: 38.4px;
+    line-height: 28.8px;
+    margin-bottom: 11px;
   }
   .forex-course-text {
     font-size: 16px;
@@ -30,6 +31,7 @@
     letter-spacing: 0.6px;
     text-transform: uppercase;
     width: 100%;
+    margin-top: 30px;
   }
   .forex-course-image img {
     object-fit: contain;
@@ -46,6 +48,11 @@
     z-index: 1;
   }
   @media (min-width: 750px) {
+    .forex-course-header {
+      line-height: 38.4px;
+      margin-bottom: 20px;
+    }
+
     .forex-course-image-with-text {
       padding: 4rem calc(4rem / var(--font-body-scale)) 5rem;
     }
@@ -98,7 +105,7 @@
           {% case block.type %}
             {%- when 'heading' -%}
               <h2
-                class="forex-course-header image-with-text__heading inline-richtext {{ block.settings.heading_size }}"
+                class="forex-course-header  inline-richtext {{ block.settings.heading_size }}"
                 {{ block.shopify_attributes }}
               >
                 {{ block.settings.heading }}
@@ -125,7 +132,7 @@
                   {% else %}
                     href="{{ block.settings.button_link }}"
                   {% endif %}
-                  class="forex-course-button button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
+                  class="forex-course-button  small-hide button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
                   {{ block.shopify_attributes }}
                 >
                   {{ block.settings.button_label | escape }}
