@@ -3,8 +3,8 @@
 
 {%- style -%}
   .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    padding-top: {{ section.settings.padding_top | times: 0.3 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.3 | round: 0 }}px;
   }
   .forex-member-container {
     background-image(url('{{ section.settings.background }}'))
@@ -20,9 +20,9 @@
   .forex-members-title {
     margin: 0 auto;
     color: #0d0d0d;
-    font-size: 32px;
+    font-size: clamp(24px, 5vw, 32px);
     font-weight: 700;
-    line-height: 38.4px;
+    line-height: 28.8px;
     text-align: center;
   }
   .forex-members-button p {
@@ -79,7 +79,7 @@
     height: 90px;
     border-radius: 50%;
     border: 2px solid #fff;
-    margin: -45px auto 0;
+    margin: -45px auto 20px;
     overflow: hidden;
     background: gray;
 
@@ -99,10 +99,14 @@
     font-weight: 700;
     line-height: 9px;
   }
+  .member-info span {
+    font-weight: 400;
+    font-size: 19px;
+  }
   .member-info-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: 20px;
+    padding: 5%;
   }
 
   .member-info-grid-item {
@@ -134,11 +138,14 @@
     gap: 15px;
   }
   @media (min-width: 750px) {
+    .forex-members-title {
+      line-height: 38.4px;
+    }
     .forex-members-button {
       width: auto;
     }
     .forex-members-grid {
-      gap: 5px;
+      gap: 8px;
     }
   }
 </style>
