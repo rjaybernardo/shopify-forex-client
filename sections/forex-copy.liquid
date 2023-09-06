@@ -17,7 +17,7 @@
   .forex-copy-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 0px;
     width: min(90%, 980px);
     margin: 0 auto;
   }
@@ -26,13 +26,13 @@
     font-size: 24px;
     font-weight: 700;
     line-height: 36px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
   .forex-copy-text {
     color: #333;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 400;
-    line-height: 24px;
+    line-height: 22.5px;
 
     display: flex;
     align-items: center;
@@ -42,6 +42,14 @@
   @media (min-width: 990px) {
     .forex-copy-grid {
       grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .forex-copy-header {
+      margin-bottom: 21px;
+    }
+    .forex-copy-text {
+      font-size: 16px;
+      line-height: 24px;
     }
   }
 </style>
