@@ -15,10 +15,35 @@
   }
 {%- endstyle -%}
 <style>
-.forex-faq-icon svg{
-  width:16px;
-  height:16px;
-}
+  .forex-faq-header {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    border-bottom: 2px solid rgba(0, 183, 119, 0.65);
+    max-width: 80px;
+  }
+  .forex-faq-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+  .forex-faq-accordion__title {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 15px;
+  }
+  @media (min-width: 750px) {
+    .forex-faq-header {
+      font-size: 32px;
+      line-height: 38.4px;
+      border-bottom: 2px solid #0d0d0d;
+      max-width: 120px;
+    }
+    .forex-faq-accordion__title {
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 17px;
+    }
+  }
 </style>
 
 <div class="color-{{ section.settings.color_scheme }} gradient">
@@ -35,7 +60,7 @@
             </p>
           {% endif %}
           {%- if section.settings.heading != blank -%}
-            <h2 class="collapsible-content__heading inline-richtext {{ section.settings.heading_size }}">
+            <h2 class="forex-faq-header collapsible-content__heading inline-richtext {{ section.settings.heading_size }}">
               {{ section.settings.heading }}
             </h2>
           {%- else -%}
@@ -89,7 +114,7 @@
                 >
                   <summary id="Summary-{{ block.id }}-{{ section.id }}">
                     {% render 'icon-accordion', icon: block.settings.icon %}
-                    <h3 class="accordion__title inline-richtext h4">
+                    <h3 class="forex-faq-accordion__title accordion__title inline-richtext h4">
                       {{ block.settings.heading | default: block.settings.page.title }}
                     </h3>
                     <div class="forex-faq-icon">
@@ -495,35 +520,35 @@
     }
   ],
   "presets": [
-      {
-        "name": "Forex FAQ",
-        "blocks": [
-          {
-            "type": "collapsible_row",
-            "settings": {
-              "icon": "none"
-            }
-          },
-          {
-            "type": "collapsible_row",
-            "settings": {
-              "icon": "none"
-            }
-          },
-          {
-            "type": "collapsible_row",
-            "settings": {
-              "icon": "none"
-            }
-          },
-          {
-            "type": "collapsible_row",
-            "settings": {
-              "icon": "none"
-            }
+    {
+      "name": "Forex FAQ",
+      "blocks": [
+        {
+          "type": "collapsible_row",
+          "settings": {
+            "icon": "none"
           }
-        ]
-      }
-    ]
+        },
+        {
+          "type": "collapsible_row",
+          "settings": {
+            "icon": "none"
+          }
+        },
+        {
+          "type": "collapsible_row",
+          "settings": {
+            "icon": "none"
+          }
+        },
+        {
+          "type": "collapsible_row",
+          "settings": {
+            "icon": "none"
+          }
+        }
+      ]
+    }
+  ]
 }
 {% endschema %}
