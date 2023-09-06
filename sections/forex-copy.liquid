@@ -39,6 +39,10 @@
     gap: 11px;
     margin-bottom: 15px;
   }
+  .forex-copy-icon {
+    width: 22px;
+    height: 22px;
+  }
   @media (min-width: 990px) {
     .forex-copy-grid {
       grid-template-columns: repeat(2, 1fr);
@@ -50,6 +54,10 @@
     .forex-copy-text {
       font-size: 16px;
       line-height: 24px;
+    }
+    .forex-copy-icon {
+      width: 25px;
+      height: 25px;
     }
   }
 </style>
@@ -65,8 +73,8 @@
             <h2 class="forex-copy-header">{{ block.settings.copy_header }}</h2>
           {% when 'copy_text' %}
             <div class="forex-copy-text">
-              {%- render 'icon-check' -%}
-              {{ block.settings.copy_text }}
+              <div class="forex-copy-icon">{%- render 'icon-check' -%}</div>
+              <p>{{ block.settings.copy_text }}</p>
             </div>
         {% endcase %}
       {% endfor %}
@@ -80,8 +88,8 @@
             <h2 class="forex-copy-header">{{ block.settings.trading_header }}</h2>
           {% when 'trading_text' %}
             <div class="forex-copy-text">
-              {%- render 'icon-cross' -%}
-              {{ block.settings.trading_text }}
+              <div class="forex-copy-icon">{%- render 'icon-cross' -%}</div>
+              <p>{{ block.settings.trading_text }}</p>
             </div>
         {% endcase %}
       {% endfor %}

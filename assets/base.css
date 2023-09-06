@@ -1061,7 +1061,7 @@ summary::-webkit-details-marker {
   }
 
   .grid--peek .grid__item {
-    min-width: 35%;
+    min-width: 50%;
   }
 
   .grid--peek.slider .grid__item:first-of-type {
