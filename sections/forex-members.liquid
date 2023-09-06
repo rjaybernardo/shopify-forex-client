@@ -138,7 +138,7 @@
       width: auto;
     }
     .forex-members-grid {
-      gap: 2px;
+      gap: 5px;
     }
   }
 </style>
@@ -242,13 +242,13 @@
       </ul>
 
       {%- if show_mobile_slider -%}
-        <div class="slider-buttons no-js-hidden medium-hide">
+        <div class="slider-buttons no-js-hidden">
           <button
             type="button"
             class="slider-button slider-button--prev"
             name="previous"
             aria-label="{{ 'general.slider.previous_slide' | t }}"
-            style="padding:3px;border-radius:50%;background:white"
+            style="padding:3px;border-radius:50%;background:#fff;opacity:0.5"
           >
             {% render 'icon-caret' %}
           </button>
@@ -257,7 +257,7 @@
             class="slider-button slider-button--next"
             name="next"
             aria-label="{{ 'general.slider.next_slide' | t }}"
-            style="padding:3px;border-radius:50%;background:white"
+            style="padding:3px;border-radius:50%;background:#fff;opacity:0.5"
           >
             {% render 'icon-caret' %}
           </button>
