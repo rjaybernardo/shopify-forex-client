@@ -45,6 +45,10 @@
   .forex-article-multicolumn-list .grid--peek .grid__item {
     min-width: 50%;
   }
+  .articles-media > img{
+  height: 100% !important;
+  width: 100% !important;
+  }
   @media (min-width: 750px) {
     .forex-article-header {
       font-size: 32px;
@@ -139,7 +143,7 @@
                   style="padding-top:0"
                 >
                   <div
-                    class="media media--transparent media--{{ section.settings.image_ratio }}"
+                    class="articles-media media media--transparent media--{{ section.settings.image_ratio }}"
                     {% if section.settings.image_ratio == 'adapt' %}
                       style="padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%;"
                     {% endif %}
